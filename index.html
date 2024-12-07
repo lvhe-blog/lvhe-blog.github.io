@@ -1,31 +1,140 @@
-<header>
-    <div class="circular-icon">
-        <img src="https://images.pexels.com/photos/2281441/pexels-photo-2281441.jpeg" alt="圆形图标">
-    </div>
-    <img src="https://images.pexels.com/photos/2100154/pexels-photo-2100154.jpeg" alt="Header Image">
-    <div class="profile-name">吕合的博客</div>
-</header>
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>吕合的博客</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #f0f2f5;
+            border-bottom: 1px solid #ddd;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+        header img {
+            width: 100%;
+            height: auto;
+        }
+        .circular-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            border: 2px solid #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .circular-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .profile-name {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        main {
+            padding: 20px;
+        }
+        .blog-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .blog-card {
+            width: 300px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .blog-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        .blog-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        .blog-content {
+            padding: 15px;
+        }
+        .blog-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .blog-date {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+        .blog-description {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <!-- 标题区域 -->
+    <header>
+        <div class="circular-icon">
+            <!-- 使用Pexels风景图片作为头像图标 -->
+            <img src="https://images.pexels.com/photos/3225512/pexels-photo-3225512.jpeg" alt="圆形图标">
+        </div>
+        <!-- 使用Pexels风景图片作为头图 -->
+        <img src="https://images.pexels.com/photos/2310648/pexels-photo-2310648.jpeg" alt="Header Image">
+        <div class="profile-name">吕合的博客</div>
+    </header>
 
-<main>
-    <div class="blog-container">
-        <!-- 第一篇博客 -->
-        <div class="blog-card" onclick="openBlog('blog1')">
-            <img src="https://images.pexels.com/photos/2100154/pexels-photo-2100154.jpeg" alt="自然景观：森林中的绿色树木">
-            <div class="blog-content">
-                <div class="blog-title">和欧美谈谈：知彼知己！</div>
-                <div class="blog-date">发布日期: 2024-11-27</div>
-                <div class="blog-description">从二十年代开始，面对中国共产党对世界的毒害日渐加剧……</div>
+    <!-- 博客内容 -->
+    <main>
+        <div class="blog-container">
+            <!-- 第一篇博客 -->
+            <div class="blog-card" onclick="openBlog('blog1')">
+                <!-- 使用Pexels风景图片作为博客封面图 -->
+                <img src="https://images.pexels.com/photos/2310648/pexels-photo-2310648.jpeg" alt="和欧美谈谈：知彼知己！">
+                <div class="blog-content">
+                    <div class="blog-title">和欧美谈谈：知彼知己！</div>
+                    <div class="blog-date">发布日期: 2024-11-27</div>
+                    <div class="blog-description">从二十年代开始，面对中国共产党对世界的毒害日渐加剧……</div>
+                </div>
+            </div>
+
+            <!-- 第二篇博客 -->
+            <div class="blog-card" onclick="openBlog('blog2')">
+                <!-- 使用Pexels风景图片作为博客封面图 -->
+                <img src="https://images.pexels.com/photos/2500762/pexels-photo-2500762.jpeg" alt="在“唯一支持台湾”的群帖文">
+                <div class="blog-content">
+                    <div class="blog-title">在“唯一支持台湾”的群帖文</div>
+                    <div class="blog-date">发布日期: 2024-11-28</div>
+                    <div class="blog-description">以中华大义论，不管是文化传承、还是文明传承……</div>
+                </div>
             </div>
         </div>
+    </main>
 
-        <!-- 第二篇博客 -->
-        <div class="blog-card" onclick="openBlog('blog2')">
-            <img src="https://images.pexels.com/photos/2240144/pexels-photo-2240144.jpeg" alt="简约的自然风景：蓝天草地">
-            <div class="blog-content">
-                <div class="blog-title">在“唯一支持台湾”的群帖文</div>
-                <div class="blog-date">发布日期: 2024-11-28</div>
-                <div class="blog-description">以中华大义论，不管是文化传承、还是文明传承……</div>
-            </div>
-        </div>
-    </div>
-</main>
+    <script>
+        function openBlog(blogId) {
+            // 打开博客内容
+            alert("博客内容ID: " + blogId); // 示例，实际可跳转或弹出内容
+        }
+    </script>
+</body>
+</html>
