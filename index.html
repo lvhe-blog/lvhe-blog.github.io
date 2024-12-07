@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="zh">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>吕合的博客</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <!-- 标题区域 -->
     <header>
+        <a href="/">返回首页</a>
         <div class="circular-icon">
+            <!-- 使用Pexels风景图片作为头像图标 -->
             <img src="https://images.pexels.com/photos/3225512/pexels-photo-3225512.jpeg" alt="圆形图标">
         </div>
+        <!-- 使用Pexels风景图片作为头图 -->
         <img src="https://images.pexels.com/photos/2310648/pexels-photo-2310648.jpeg" alt="Header Image">
         <div class="profile-name">吕合的博客</div>
     </header>
@@ -25,7 +30,7 @@
                 <div class="blog-content">
                     <div class="blog-title">和欧美谈谈：知彼知己！</div>
                     <div class="blog-date">发布日期: 2023-06-12</div>
-                    <div class="blog-description">从二十年代开始，面对：中国共产党对世界的毒害日渐加剧，到现在的毒性全面爆发，使全世界所有的国家都毒发到口吐白沫，“联合国也发病昏厥”的...</div>
+                    <div class="blog-description">和欧美谈谈：知彼知己！从二十年代开始，面对：中国共产党对世界的毒害日渐加剧，到现在的毒性全面爆发，使全世界所有的国家都毒发到口吐白沫，“联合国也发病昏厥”的、至今，没有一个人、一个专家、一个国家对中共有所了解！</div>
                 </div>
             </div>
 
@@ -45,17 +50,17 @@
                 <div class="blog-content">
                     <div class="blog-title">我为什么批评了布林肯访共</div>
                     <div class="blog-date">发布日期: 2023-06-18</div>
-                    <div class="blog-description">1，欧美与俄罗斯向来摩擦不断，欧美与中共则从埃德加斯诺到基辛格，再到支持中共联合国入常等有着不同寻常的80年和川普总统之前如胶似漆的50年！</div>
+                    <div class="blog-description">（乌克兰和台湾的国际关系区别：）1，欧美与俄罗斯向来摩擦不断，欧美与中共则从埃德加斯诺到基辛格，再到支持中共联合国入常等有着不同寻常的80年和川普总统之前如胶似漆的50年！</div>
                 </div>
             </div>
 
             <!-- 第四篇博客 -->
             <div class="blog-card" onclick="openBlog('blog4')">
-                <img src="https://images.pexels.com/photos/2500762/pexels-photo-2500762.jpeg" alt="奴隶">
+                <img src="https://images.pexels.com/photos/2500762/pexels-photo-2500762.jpeg" alt="名词解析：奴隶">
                 <div class="blog-content">
-                    <div class="blog-title">奴隶</div>
+                    <div class="blog-title">名词解析：奴隶</div>
                     <div class="blog-date">发布日期: 2023-06-17</div>
-                    <div class="blog-description">“奴隶”是人类历史早期出现的野蛮统治状态下，泯灭人性之罪恶社会制度中的一个将被剥夺了人权的人做为畜生对待的定向性名词！</div>
+                    <div class="blog-description">“奴隶”是人类历史早期出现的野蛮统治状态下，泯灭人性之罪恶社会制度中的一个将被剥夺了人权的人做为畜生对待的定向性名词！定向性名词：是指对同一种个体区分对待的指向定义！</div>
                 </div>
             </div>
         </div>
@@ -63,9 +68,10 @@
 
     <script>
         function openBlog(blogId) {
-            // 根据 blogId 跳转到对应的博客详细页面
-            window.location.href = blogId + ".html"; // 假设博客页面名为 blog1.html, blog2.html 等
+            // 这里是示例，可以实现博客内容的跳转或者展示
+            alert("博客内容ID: " + blogId); 
         }
     </script>
 </body>
+
 </html>
