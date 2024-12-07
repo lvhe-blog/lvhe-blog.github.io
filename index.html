@@ -6,6 +6,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>吕合的博客</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* 新增的CSS样式，调整头图的高度 */
+        header img {
+            height: 20%; /* 设置图片高度为原来的五分之一 */
+            width: 100%; /* 保证宽度充满 */
+            object-fit: cover; /* 保持图片不变形 */
+        }
+
+        /* 标题区域 */
+        header {
+            background-color: #f0f2f5;
+            border-bottom: 1px solid #ddd;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        header a {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        /* 圆形头像图标 */
+        .circular-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+            position: absolute;
+            bottom: 10px; /* 设置为距离底部10px */
+            left: 10px;  /* 靠左放置 */
+            border: 2px solid #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* 圆形头像图标的图片 */
+        .circular-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* 博客内容 */
+        main {
+            padding: 20px;
+        }
+
+        .blog-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .blog-card {
+            width: 300px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .blog-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .blog-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .blog-content {
+            padding: 15px;
+        }
+
+        .blog-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .blog-date {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .blog-description {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* 返回首页链接 */
+        header a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 
 <body>
@@ -13,11 +119,11 @@
     <header>
         <a href="/">返回首页</a>
         <div class="circular-icon">
-            <!-- 使用Pexels风景图片作为头像图标 -->
-            <img style="float: right;margin-left: auto;  margin-right: auto;" src="your-icon-image.png">
+            <!-- 使用自己的头像图标 -->
+            <img src="https://raw.githubusercontent.com/lvhe-blog/lvhe-blog.github.io/main/your-icon-image.png">
         </div>
-        <!-- 使用Pexels风景图片作为头图 -->
-        <img src="https://images.pexels.com/photos/2310648/pexels-photo-2310648.jpeg" alt="Header Image">
+        <!-- 使用统一的背景图 -->
+        <img src="https://raw.githubusercontent.com/lvhe-blog/lvhe-blog.github.io/main/%E5%B1%8F%E5%B9%95%E6%8D%95%E8%8E%B7_2024_11_27_19_28_59_445.png" alt="Header Image">
         <div class="profile-name">吕合的博客</div>
     </header>
 
@@ -26,7 +132,7 @@
         <div class="blog-container">
             <!-- 第一篇博客 -->
             <div class="blog-card" onclick="openBlog('blog1')">
-                <img src="https://images.pexels.com/photos/2310648/pexels-photo-2310648.jpeg" alt="和欧美谈谈：知彼知己！">
+                <img src="https://raw.githubusercontent.com/lvhe-blog/lvhe-blog.github.io/main/%E5%B1%8F%E5%B9%95%E6%8D%95%E8%8E%B7_2024_11_27_19_28_59_445.png" alt="和欧美谈谈：知彼知己！">
                 <div class="blog-content">
                     <div class="blog-title">和欧美谈谈：知彼知己！</div>
                     <div class="blog-date">发布日期: 2023-06-12</div>
@@ -36,7 +142,7 @@
 
             <!-- 第二篇博客 -->
             <div class="blog-card" onclick="openBlog('blog2')">
-                <img src="https://images.pexels.com/photos/2500762/pexels-photo-2500762.jpeg" alt="在“唯一支持台湾”的群帖文">
+                <img src="https://raw.githubusercontent.com/lvhe-blog/lvhe-blog.github.io/main/%E5%B1%8F%E5%B9%95%E6%8D%95%E8%8E%B7_2024_11_27_19_28_59_445.png" alt="在“唯一支持台湾”的群帖文">
                 <div class="blog-content">
                     <div class="blog-title">在“唯一支持台湾”的群帖文</div>
                     <div class="blog-date">发布日期: 2023-06-16</div>
@@ -46,7 +152,7 @@
 
             <!-- 第三篇博客 -->
             <div class="blog-card" onclick="openBlog('blog3')">
-                <img src="https://images.pexels.com/photos/2500762/pexels-photo-2500762.jpeg" alt="我为什么批评了布林肯访共">
+                <img src="https://raw.githubusercontent.com/lvhe-blog/lvhe-blog.github.io/main/%E5%B1%8F%E5%B9%95%E6%8D%95%E8%8E%B7_2024_11_27_19_28_59_445.png" alt="我为什么批评了布林肯访共">
                 <div class="blog-content">
                     <div class="blog-title">我为什么批评了布林肯访共</div>
                     <div class="blog-date">发布日期: 2023-06-18</div>
@@ -56,7 +162,7 @@
 
             <!-- 第四篇博客 -->
             <div class="blog-card" onclick="openBlog('blog4')">
-                <img src="https://images.pexels.com/photos/2500762/pexels-photo-2500762.jpeg" alt="名词解析：奴隶">
+                <img src="https://raw.githubusercontent.com/lvhe-blog/lvhe-blog.github.io/main/%E5%B1%8F%E5%B9%95%E6%8D%95%E8%8E%B7_2024_11_27_19_28_59_445.png" alt="名词解析：奴隶">
                 <div class="blog-content">
                     <div class="blog-title">名词解析：奴隶</div>
                     <div class="blog-date">发布日期: 2023-06-17</div>
@@ -68,8 +174,16 @@
 
     <script>
         function openBlog(blogId) {
-            // 这里是示例，可以实现博客内容的跳转或者展示
-            alert("博客内容ID: " + blogId); 
+            // 跳转到相应的博客页面
+            if (blogId === 'blog1') {
+                window.location.href = 'blog1.html';  // 你需要创建 blog1.html 等文件
+            } else if (blogId === 'blog2') {
+                window.location.href = 'blog2.html';
+            } else if (blogId === 'blog3') {
+                window.location.href = 'blog3.html';
+            } else if (blogId === 'blog4') {
+                window.location.href = 'blog4.html';
+            }
         }
     </script>
 </body>
