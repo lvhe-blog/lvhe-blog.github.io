@@ -27,8 +27,8 @@
 
         header img {
             width: 100%;
-            max-height: 150px; /* 设置图片的最大高度 */
-            object-fit: cover; /* 保证图片比例不失真 */
+            max-height: 300px;
+            object-fit: cover;
         }
 
         header a {
@@ -192,7 +192,7 @@
     </main>
 
     <script>
-        // 初始化博客数据，这里展示的是10篇，后续可自行修改
+        // 假设的博客数据
         const blogs = [
             { title: "送禅师", date: "2024年8月17日", description: "七月八月蚊当家，飞到耳边嗡嗡哇；不知其等是啥咖，一口一个小红疤。" },
             { title: "2023年11月23日 · 一个来自中国做妓女的华文大v", date: "2023年11月23日", description: "一个脏的不能再脏的频道，频遭平台黄标。" },
@@ -206,7 +206,7 @@
             { title: "8081", date: "2023年11月1日", description: "Zhi Liaochen 顶礼师父🙏🙏🙏" }
         ];
 
-        const blogsPerPage = 8; // 每页显示的博客数量
+        const blogsPerPage = 12; // 每页显示的博客数量
         let currentPage = 1; // 当前页面
         const totalPages = Math.ceil(blogs.length / blogsPerPage); // 计算总页数
 
@@ -236,4 +236,23 @@
             updatePagination();
         }
 
-        // 更新分页按钮状态
+        // 更新分页按钮状态和页码
+        function updatePagination() {
+            document.getElementById('prevBtn').disabled = currentPage === 1;
+            document.getElementById('nextBtn').disabled = currentPage === totalPages;
+            document.getElementById('current-page').textContent = currentPage;
+            document.getElementById('total-pages').textContent = totalPages;
+        }
+
+        // 切换页面
+        function changePage(direction) {
+            currentPage += direction;
+            renderBlogs(currentPage);
+        }
+
+        // 初始化
+        renderBlogs(currentPage);
+    </script>
+</body>
+
+</html>
