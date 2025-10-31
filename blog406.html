@@ -1,98 +1,112 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>吕合的学习经历 - 青岛建工学院</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Noto Serif', serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(to right, #f0f2f5, #d9e2ec);
-            color: #222;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>吕合的学习经历 - 青岛建工学院</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
+<style>
+    body {
+        font-family: 'Noto Serif', serif;
+        margin: 0;
+        padding: 0;
+        background: #f0f2f5;
+        color: #222;
+    }
+
+    header {
+        position: relative;
+        height: 320px;
+        color: #fff;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: linear-gradient(to bottom, rgba(0,102,204,0.6), rgba(0,51,102,0.8)),
+                    url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+        box-shadow: inset 0 0 30px rgba(0,0,0,0.5);
+    }
+
+    header h1 {
+        font-size: 3rem;
+        margin: 0;
+        letter-spacing: 3px;
+        text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    }
+
+    main {
+        max-width: 900px;
+        margin: -60px auto 40px auto;
+        padding: 50px;
+        background: #ffffff;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        position: relative;
+        z-index: 1;
+    }
+
+    article h2 {
+        font-size: 2rem;
+        color: #2b2e4a;
+        margin-bottom: 12px;
+        border-bottom: 2px solid #e6e6e6;
+        padding-bottom: 10px;
+    }
+
+    .date {
+        font-size: 1rem;
+        color: #666;
+        margin-bottom: 24px;
+    }
+
+    p {
+        font-size: 1.125rem;
+        line-height: 1.9;
+        margin-bottom: 20px;
+        white-space: pre-wrap;
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+        color: #888;
+        font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+        header {
+            height: 220px;
+            padding: 0 10px;
         }
 
-        header {
-            background: linear-gradient(to right, #4a5568, #2b2e4a);
-            color: #fff;
-            padding: 60px 20px 40px 20px;
-            text-align: center;
+        header h1 {
             font-size: 2rem;
-            font-weight: 700;
-            letter-spacing: 2px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
 
         main {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 40px;
-            background: #ffffff;
-            border-radius: 16px;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+            margin: -40px 10px 20px 10px;
+            padding: 25px;
         }
 
-        article h1 {
-            font-size: 2rem;
-            color: #2b2e4a;
-            margin-bottom: 12px;
-            border-bottom: 2px solid #e6e6e6;
-            padding-bottom: 10px;
-        }
-
-        .date {
-            font-size: 1rem;
-            color: #666;
-            margin-bottom: 24px;
+        article h2 {
+            font-size: 1.5rem;
         }
 
         p {
-            font-size: 1.125rem;
-            line-height: 1.9;
-            margin-bottom: 20px;
-            white-space: pre-wrap;
+            font-size: 1rem;
         }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            color: #888;
-            font-size: 0.9rem;
-        }
-
-        @media (max-width: 600px) {
-            main {
-                margin: 20px 10px;
-                padding: 20px;
-            }
-
-            header {
-                font-size: 1.5rem;
-                padding: 40px 10px 30px 10px;
-            }
-
-            article h1 {
-                font-size: 1.5rem;
-            }
-
-            p {
-                font-size: 1rem;
-            }
-        }
-    </style>
+    }
+</style>
 </head>
 <body>
     <header>
-        吕合
+        <h1>吕合</h1>
     </header>
 
     <main>
         <article>
-            <h1>青岛建工学院</h1>
+            <h2>青岛</h2>
             <div class="date">1980年 · 青岛建工学院</div>
-
             <p>入读青岛建工学院</p>
             <p>1984 大学 — 应用物理学材料力学和钢结构</p>
             <p>背着草帘子入学，草帘子让学校扔了，换了褥子和床垫！</p>
@@ -100,7 +114,7 @@
     </main>
 
     <footer>
-        &copy; 2025 档案
+        &copy; 2025 个人档案
     </footer>
 </body>
 </html>
